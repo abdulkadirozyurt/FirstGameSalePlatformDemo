@@ -10,19 +10,19 @@ namespace FirstGameDemo.Business.Concrete
 {
     public class CampaignManager : ICampaignService
     {
-        public void Add(Campaign campaign)
+        public void AddCampaign(Campaign campaign)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(campaign.Name+" Eklenmiştir.");
         }
 
-        public void Delete(Campaign campaign)
+        public void DeleteCampaign(Campaign campaign)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(campaign.Name + " Silinmiştir.");
         }
 
-        public void Update(Campaign campaign)
+        public void UpdateCampaign(Campaign campaign)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(campaign.Name + " Güncellenmiştir.");
         }
     }
 }

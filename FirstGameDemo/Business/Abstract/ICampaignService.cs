@@ -9,8 +9,8 @@ namespace FirstGameDemo.Business.Abstract
 {
     public interface ICampaignService
     {
-        void Add(Campaign campaign);
-        void Update(Campaign campaign);
-        void Delete(Campaign campaign);
+        void AddCampaign(Campaign campaign);
+        void UpdateCampaign(Campaign campaign);
+        void DeleteCampaign(Campaign campaign);
     }
 }

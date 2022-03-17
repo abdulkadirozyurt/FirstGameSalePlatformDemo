@@ -1,5 +1,6 @@
 ﻿using FirstGameDemo.Business.Abstract;
 using FirstGameDemo.Entity;
+using FirstGameSalePlatformDemo.Business.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,19 +11,39 @@ namespace FirstGameDemo.Business.Concrete
 {
     public class CustomerManager : ICustomerService
     {
+
+        private ICustomerCheckService _customerCheckService;
+
+        public CustomerManager(ICustomerCheckService customerCheckService)
+        {
+            _customerCheckService = customerCheckService;
+        }
+
+
+
+
+
         public void Delete(Customer customer)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(customer.FirstName+" isimli oyuncu kaydı silinmiştir.");
         }
 
         public void SignUp(Customer customer)
         {
-            throw new NotImplementedException();
+            if (_customerCheckService.CheckIfRealCustomer(customer))
+            {
+                Console.WriteLine("Yeni oyuncu kaydı alınmıştır. " + customer.FirstName + " " + customer.LastName);
+            }
+            else
+            {
+                Console.WriteLine(customer.FirstName+" isimli kullanıcı, hatalı bilgi girdiğinden dolayı kayıt edilemedi.");
+            }
+            
         }
 
         public void Update(Customer customer)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(customer.FirstName+" oyuncusunun kaydı güncellenmiştir.");
         }
     }
 }
