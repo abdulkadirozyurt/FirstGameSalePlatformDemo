@@ -12,10 +12,10 @@ namespace FirstGameSalePlatformDemo
         {
             Customer gamer1 = new Customer() 
             { 
-                FirstName = "Abdulkadir", 
-                LastName = "Özyurt", 
-                Id = 18043787086, 
-                DateOfBirth = new DateTime(2001,1,27) 
+                FirstName = "Emirhan", 
+                LastName = "Cıbır", 
+                Id = 32339091190, 
+                DateOfBirth = new DateTime(2001,5,28) 
             };
 
             CustomerManager customerManager = new CustomerManager(new MernisServiceAdapter());
@@ -30,9 +30,9 @@ namespace FirstGameSalePlatformDemo
             CampaignManager campaignManager = new CampaignManager();
             campaignManager.AddCampaign(campaign1);
 
-            GameManager gameManager = new GameManager()
+            Game game = new Game()
             {
-
+                
             };
 
 
