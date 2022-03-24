@@ -39,7 +39,7 @@ namespace FirstGameSalePlatformDemo
 
 
 
-            GamerManager gamerManager = new GamerManager(new UserValidationManager());
+            GamerManager gamerManager = new GamerManager(new NewEStateUserValidationManager());
             gamerManager.Add(new Gamer
             {
                 Id = 1,
