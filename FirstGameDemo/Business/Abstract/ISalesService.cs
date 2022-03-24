@@ -9,8 +9,8 @@ namespace FirstGameDemo.Business.Abstract
 {
     public interface ISalesService
     {
-        void Invoice(Customer customer);
-        void Sale(Customer customer, Campaign campaign);
+        void Invoice(Gamer customer);
+        void Sale(Gamer customer, Campaign campaign);
         
 
     }

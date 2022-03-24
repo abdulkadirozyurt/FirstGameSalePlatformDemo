@@ -10,12 +10,12 @@ namespace FirstGameDemo.Business.Concrete
 {
     public class SalesManager : ISalesService
     {
-        public void Invoice(Customer customer)
+        public void Invoice(Gamer customer)
         {
             Console.WriteLine("Değerli Müşterimiz " + customer.FirstName + " " + customer.LastName + ", faturanız e-posta olarak gönderilmiştir.");
         }
 
-        public void Sale(Customer customer, Campaign campaign)
+        public void Sale(Gamer customer, Campaign campaign)
         {
             Console.WriteLine("Sayın " + customer.FirstName + " " + customer.LastName + ", oyununuzda iyi eğlenceler dileriz");
         }

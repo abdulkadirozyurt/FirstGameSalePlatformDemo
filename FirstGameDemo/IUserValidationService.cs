@@ -5,12 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstGameSalePlatformDemo.Business.Abstract
+namespace GameProject
 {
-    public interface ICustomerCheckService
+    public interface IUserValidationService
     {
-
-        bool CheckIfRealCustomer(Gamer customer);
-
+        bool Validate(Gamer gamer);
     }
 }

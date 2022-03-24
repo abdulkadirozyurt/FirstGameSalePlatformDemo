@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace FirstGameDemo.Business.Abstract
 {
-    public interface ICustomerService
+    public interface IGamerService
     {
-        void SignUp(Customer customer);
-
-        void Update(Customer customer);
-
-        void Delete(Customer customer);
+        void Add(Gamer gamer); 
+        void Update(Gamer gamer);
+        void Delete(Gamer gamer);
+        
     }
 }

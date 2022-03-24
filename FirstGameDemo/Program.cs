@@ -1,8 +1,6 @@
 ﻿using FirstGameDemo.Business.Concrete;
 using FirstGameDemo.Entity;
-using FirstGameSalePlatformDemo.Adapter;
-using FirstGameSalePlatformDemo.Business.Abstract;
-using System;
+using GameProject.Business.Concrete;
 
 namespace FirstGameSalePlatformDemo
 {
@@ -10,34 +8,47 @@ namespace FirstGameSalePlatformDemo
     {
         static void Main(string[] args)
         {
-            Customer gamer1 = new Customer() 
-            { 
-                FirstName = "Emirhan", 
-                LastName = "Cıbır", 
-                Id = 32339091190, 
-                DateOfBirth = new DateTime(2001,5,28) 
-            };
+            //Gamer gamer1 = new Gamer() 
+            //{ 
+            //    FirstName = "Emirhan", 
+            //    LastName = "Cıbır", 
+            //    Id = 32339091190, 
+            //    DateOfBirth = new DateTime(2001,5,28) 
+            //};
 
-            CustomerManager customerManager = new CustomerManager(new MernisServiceAdapter());
-            customerManager.SignUp(gamer1);
+            //GamerManager customerManager = new GamerManager(new MernisServiceAdapter());
+            //customerManager.SignUp(gamer1);
 
 
-            Campaign campaign1 = new Campaign()
+            //Campaign campaign1 = new Campaign()
+            //{
+            //    Name = "Kış İndirimleri"
+            //};
+
+            //CampaignManager campaignManager = new CampaignManager();
+            //campaignManager.AddCampaign(campaign1);
+
+            //Game game = new Game()
+            //{
+
+            //};
+
+
+            //SalesManager salesManager = new SalesManager();
+            //salesManager.Sale(gamer1, campaign1);
+
+
+
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
+            gamerManager.Add(new Gamer
             {
-                Name = "Kış İndirimleri"
-            };
+                Id = 1,
+                FirstName = "ABDULKADİR",
+                LastName = "ÖZYURT",
+                BirthYear = 2002,
+                IdentityNumber = 12345
+            });
 
-            CampaignManager campaignManager = new CampaignManager();
-            campaignManager.AddCampaign(campaign1);
-
-            Game game = new Game()
-            {
-                
-            };
-
-
-            SalesManager salesManager = new SalesManager();
-            salesManager.Sale(gamer1, campaign1);
 
 
         }
